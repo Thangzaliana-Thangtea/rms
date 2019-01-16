@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="341.0" prefWidth="358.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="title" layoutX="39.0" layoutY="45.0" styleClass="h1" text="Filter" />
+      <JFXDatePicker fx:id="from" layoutX="39.0" layoutY="108.0" onAction="#handleFrom" prefHeight="28.0" prefWidth="302.0" promptText="From" />
+      <JFXDatePicker fx:id="to" layoutX="39.0" layoutY="185.0" onAction="#handleTo" prefHeight="28.0" prefWidth="302.0" promptText="To" />
+      <JFXButton fx:id="positiveBtn" buttonType="RAISED" layoutX="101.0" layoutY="262.0" onAction="#handlePositive" prefHeight="30.0" prefWidth="99.0" styleClass="primary-btn" text="Filter" />
+      <JFXButton fx:id="negativeBtn" layoutX="228.0" layoutY="262.0" onAction="#handleNegative" prefHeight="30.0" prefWidth="99.0" styleClass="default-btn" text="Close" />
+      <Label fx:id="errorLabel" layoutX="305.0" layoutY="71.0" styleClass="error-label" AnchorPane.rightAnchor="91.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import org.controlsfx.control.GridView?>
+
+<AnchorPane id="AnchorPane" prefHeight="503.0" prefWidth="731.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="31.0" layoutY="29.0" prefHeight="50.0" styleClass="plane-top-panel" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="14.0" layoutY="17.0" styleClass="h2" text="List of receipts" textFill="#f8f8f8" />
+            <Button fx:id="menu" contentDisplay="CENTER" layoutX="675.0" layoutY="9.0" mnemonicParsing="false" onAction="#handleMenu" styleClass="transparent-btn" AnchorPane.rightAnchor="20.0">
+               <graphic>
+                  <FontAwesomeIconView fill="#f8f8f8" glyphName="ELLIPSIS_V" size="2em" />
+               </graphic>
+               <effect>
+                  <DropShadow height="10.0" radius="4.5" width="10.0" />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <JFXProgressBar fx:id="bar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <TextField fx:id="searchField" layoutX="431.0" layoutY="10.0" onAction="#handleSearch" prefHeight="30.0" prefWidth="243.0" promptText="Search here" style="-fx-background-radius: 20;" AnchorPane.rightAnchor="57.0" />
+         </children>
+         <effect>
+            <DropShadow height="10.0" offsetY="2.0" radius="4.5" width="10.0" />
+         </effect>
+      </AnchorPane>
+      <GridView fx:id="gridView" cellHeight="170.0" cellWidth="180.0" horizontalCellSpacing="6.0" layoutX="24.0" layoutY="98.0" prefHeight="412.0" prefWidth="691.0" verticalCellSpacing="6.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="70.0" />
+   </children>
+</AnchorPane>

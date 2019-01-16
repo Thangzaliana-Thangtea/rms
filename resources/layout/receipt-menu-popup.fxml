@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="214.0" prefWidth="164.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="14.0" layoutY="23.0" mnemonicParsing="false" onAction="#handleView" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: transparent;" text="View details">
+         <graphic>
+            <FontAwesomeIconView fill="#334455" glyphName="EYE" size="14" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="16.0" layoutY="57.0" mnemonicParsing="false" onAction="#handleEdit" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: transparent;" text="Edit">
+         <graphic>
+            <FontAwesomeIconView fill="#334455" glyphName="PENCIL" size="14" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="16.0" layoutY="94.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: transparent;" text="Delete">
+         <graphic>
+            <FontAwesomeIconView fill="#334455" glyphName="TRASH" size="14" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="15.0" layoutY="132.0" mnemonicParsing="false" onAction="#handlePayment" prefHeight="25.0" prefWidth="134.0" style="-fx-background-color: transparent;" text="New Payment">
+         <graphic>
+            <FontAwesomeIconView fill="#334455" glyphName="PLUS_CIRCLE" size="14" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="15.0" layoutY="165.0" mnemonicParsing="false" onAction="#handleViewPayment" prefHeight="25.0" prefWidth="134.0" style="-fx-background-color: transparent;" text="View Payments">
+         <graphic>
+            <FontAwesomeIconView fill="#334455" glyphName="SHOPPING_BAG" size="14" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

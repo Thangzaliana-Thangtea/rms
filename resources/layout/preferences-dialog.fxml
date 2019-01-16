@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="246.0" prefWidth="519.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="33.0" layoutY="35.0" styleClass="h2" text="Preferences" />
+      <JFXButton fx:id="closeBtn" buttonType="RAISED" cancelButton="true" layoutX="415.0" layoutY="202.0" onAction="#handleClose" prefHeight="30.0" prefWidth="79.0" styleClass="default-btn" text="Close" />
+      <Label layoutX="33.0" layoutY="75.0" text="Receipt template" />
+      <JFXRadioButton fx:id="small" layoutX="334.0" layoutY="71.0" text="55mm">
+         <toggleGroup>
+            <ToggleGroup fx:id="templateGroup" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="large" layoutX="334.0" layoutY="97.0" text="A5" toggleGroup="$templateGroup" />
+      <Label layoutX="33.0" layoutY="140.0" text="Replace an existing data when import of xml file" />
+      <JFXCheckBox fx:id="importCheck" layoutX="348.0" layoutY="140.0" />
+   </children>
+</AnchorPane>

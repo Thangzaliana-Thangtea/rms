@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/PROJEX/ReceiptManagement/src/entities/Receipt.java</file>
+            <file>file:/D:/PROJEX/ReceiptManagement/src/core/BaseDialog.java</file>
+            <file>file:/D:/PROJEX/ReceiptManagement/src/menus/DateFilterDialog.java</file>
+            <file>file:/D:/PROJEX/ReceiptManagement/src/menus/MenuEnum.java</file>
+            <file>file:/D:/PROJEX/ReceiptManagement/src/receipt/NewReceiptView.java</file>
+            <file>file:/D:/PROJEX/ReceiptManagement/src/util/ReceiptGenerator.java</file>
+            <file>file:/D:/PROJEX/ReceiptManagement/src/entities/Payment.java</file>
+            <file>file:/D:/PROJEX/ReceiptManagement/src/entities/ReceiptItemModel.java</file>
+            <file>file:/D:/PROJEX/ReceiptManagement/src/entities/ReceiptBackup.java</file>
+            <file>file:/D:/PROJEX/ReceiptManagement/src/entities/ReceiptItem.java</file>
+            <file>file:/D:/PROJEX/ReceiptManagement/src/core/BackupService.java</file>
+        </group>
+    </open-files>
+</project-private>

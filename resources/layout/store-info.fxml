@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="344.0" prefWidth="414.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="33.0" layoutY="38.0" styleClass="h2" text="Store info" />
+      <JFXTextField fx:id="nameField" labelFloat="true" layoutX="33.0" layoutY="79.0" prefHeight="25.0" prefWidth="342.0" promptText="Store name" />
+      <JFXTextArea fx:id="addressField" labelFloat="true" layoutX="33.0" layoutY="134.0" prefHeight="76.0" prefWidth="342.0" promptText="Address" />
+      <JFXTextField fx:id="contactField" labelFloat="true" layoutX="33.0" layoutY="241.0" prefHeight="25.0" prefWidth="342.0" promptText="Contact" />
+      <JFXButton fx:id="saveBtn" buttonType="RAISED" defaultButton="true" layoutX="196.0" layoutY="293.0" onAction="#handleSave" prefHeight="30.0" prefWidth="79.0" styleClass="primary-btn" text="Save" />
+      <JFXButton fx:id="closeBtn" buttonType="RAISED" cancelButton="true" layoutX="296.0" layoutY="293.0" onAction="#handleClose" prefHeight="30.0" prefWidth="79.0" styleClass="default-btn" text="Close" />
+   </children>
+</AnchorPane>

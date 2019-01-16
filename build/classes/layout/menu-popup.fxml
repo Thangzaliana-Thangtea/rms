@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="10.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#handleLatest" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: transparent;" text="Sort by latest">
+         <graphic>
+            <FontAwesomeIconView fill="#334455" glyphName="SORT" size="14" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#handleOldest" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: transparent;" text="Sort by oldest">
+         <graphic>
+            <FontAwesomeIconView fill="#334455" glyphName="SORT_UP" size="14" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#handleDates" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: transparent;" text="Filter by dates">
+         <graphic>
+            <FontAwesomeIconView fill="#334455" glyphName="FILTER" size="14" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#handleExcel" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: transparent;" text="Export as excel">
+         <graphic>
+            <FontAwesomeIconView fill="#334455" glyphName="FILE" size="14" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#handleExportXML" prefHeight="25.0" prefWidth="134.0" style="-fx-background-color: transparent;" text="Export as xml">
+         <graphic>
+            <FontAwesomeIconView fill="#334455" glyphName="UPLOAD" size="14" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#handleImport" prefHeight="25.0" prefWidth="134.0" style="-fx-background-color: transparent;" text="Import xml">
+         <graphic>
+            <FontAwesomeIconView fill="#334455" glyphName="DOWNLOAD" size="14" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="355.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="32.0" layoutY="28.0" styleClass="h2" text="List of payments" />
+      <TableView fx:id="paymentTable" editable="true" layoutX="32.0" layoutY="67.0" prefHeight="198.0" prefWidth="655.0">
+        <columns>
+          <TableColumn fx:id="dateCol" prefWidth="177.0" text="DATE" />
+            <TableColumn fx:id="amountCol" onEditCommit="#amountEdit" prefWidth="140.0" text="AMOUNT" />
+            <TableColumn fx:id="remCol" onEditCommit="#remarkEdit" prefWidth="253.0" text="REMARK" />
+            <TableColumn fx:id="actionCol" prefWidth="72.0" text="ACTION" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="negativeBtn" buttonType="RAISED" cancelButton="true" layoutX="635.0" layoutY="290.0" onAction="#handleNegative" prefHeight="30.0" styleClass="default-btn" text="Cancel" />
+      <JFXButton fx:id="positiveBtn" buttonType="RAISED" layoutX="531.0" layoutY="290.0" onAction="#handlePositive" prefHeight="30.0" prefWidth="87.0" styleClass="primary-btn" text="Apply" />
+      <Label fx:id="idLabel" layoutX="592.0" layoutY="37.0" text="Receipt id" />
+   </children>
+</AnchorPane>

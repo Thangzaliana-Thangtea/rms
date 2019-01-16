@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.CheckListView?>
+
+<AnchorPane id="AnchorPane" prefHeight="640.0" prefWidth="930.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="-20.0" layoutY="-86.0" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #F44336;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="18.0" layoutY="16.0" styleClass="h2" text="Manage Receipts" />
+            <Button fx:id="newReceiptBtn" graphicTextGap="5.0" layoutX="724.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" styleClass="primary-btn" text="New Receipt" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="11.0">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PLUS_CIRCLE" size="14" />
+               </graphic>
+            </Button>
+            <Button fx:id="moreMenu" graphicTextGap="5.0" layoutX="852.0" layoutY="9.0" mnemonicParsing="false" prefHeight="30.0" styleClass="transparent-btn" AnchorPane.rightAnchor="20.0">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="ELLIPSIS_V" size="2em" />
+               </graphic>
+            </Button>
+         </children>
+         <effect>
+            <DropShadow height="10.0" offsetY="2.0" radius="4.5" width="10.0" />
+         </effect>
+      </AnchorPane>
+      <Label layoutX="19.0" layoutY="66.0" styleClass="h2" text="List of Receipts" AnchorPane.leftAnchor="20.0" />
+      <Button fx:id="payBtn" graphicTextGap="5.0" layoutX="751.0" layoutY="68.0" mnemonicParsing="false" onAction="#handlePay" prefHeight="30.0" prefWidth="139.0" styleClass="dark-btn" text="New Payment" AnchorPane.rightAnchor="20.0">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="CREDIT_CARD" size="14" />
+         </graphic>
+      </Button>
+      <CheckListView fx:id="receiptListView" layoutX="27.0" layoutY="145.0" prefHeight="392.0" prefWidth="319.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="150.0" />
+      <SplitMenuButton fx:id="splitMenu" layoutX="281.0" layoutY="110.0" mnemonicParsing="false" onAction="#handleRefresh">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+         <graphic>
+            <FontAwesomeIconView fill="#334455" glyphName="LIST" size="1.5em" />
+         </graphic>
+      </SplitMenuButton>
+      <JFXTextField fx:id="searchField" layoutX="20.0" layoutY="110.0" onAction="#handleSearch" prefHeight="25.0" prefWidth="229.0" promptText="Search" AnchorPane.leftAnchor="20.0" />
+      <TabPane layoutX="357.0" layoutY="105.0" prefHeight="431.0" prefWidth="523.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="110.0">
+        <tabs>
+          <Tab text="Overview">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="24.0" styleClass="h2" text="Summary" />
+                        <Label fx:id="nameLabel" layoutX="14.0" layoutY="65.0" text="Label" />
+                        <Label fx:id="contactLabel" layoutX="14.0" layoutY="95.0" text="Label" />
+                        <Label fx:id="addressLabel" layoutX="14.0" layoutY="124.0" text="Label" />
+                        <TableView fx:id="receiptTable" layoutX="13.0" layoutY="154.0" prefHeight="233.0" prefWidth="532.0" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="158.0">
+                          <columns>
+                            <TableColumn fx:id="snCol" maxWidth="37.0" minWidth="37.0" prefWidth="37.0" text="SN" />
+                            <TableColumn fx:id="particularCol" maxWidth="500.0" minWidth="180.0" prefWidth="180.0" text="Particular" />
+                              <TableColumn fx:id="rateCol" maxWidth="100.0" minWidth="60.0" prefWidth="84.0" text="Rate" />
+                              <TableColumn fx:id="qtyCol" maxWidth="100.0" minWidth="60.0" prefWidth="60.0" text="Qty" />
+                              <TableColumn fx:id="unitCol" maxWidth="100.0" minWidth="60.0" prefWidth="61.0" text="Unit" />
+                              <TableColumn fx:id="amountCol" maxWidth="300.0" minWidth="100.0" prefWidth="100.0" text="Amount" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <Label layoutX="381.0" layoutY="399.0" text="Subtotal" AnchorPane.bottomAnchor="85.0" />
+                        <Label layoutX="382.0" layoutY="424.0" text="Discount" AnchorPane.bottomAnchor="60.0" />
+                        <Label layoutX="403.0" layoutY="454.0" text="Total" AnchorPane.bottomAnchor="30.0" />
+                        <Label fx:id="statusLabel" layoutX="512.0" layoutY="119.0" prefHeight="30.0" prefWidth="139.0" style="-fx-background-color: #345; -fx-alignment: center; -fx-background-radius: 20; -fx-text-fill: white;" text="Status" AnchorPane.rightAnchor="10.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Button graphicTextGap="10.0" layoutX="448.0" layoutY="20.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" styleClass="secondary-btn" text="Print" AnchorPane.rightAnchor="10.0">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="PRINT" size="14" />
+                           </graphic>
+                        </Button>
+                        <Button graphicTextGap="6.0" layoutX="470.0" layoutY="53.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" styleClass="primary-btn" text="Export" AnchorPane.rightAnchor="10.0">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="PDF" size="14" />
+                           </graphic>
+                        </Button>
+                        <Label fx:id="subtotalLabel" layoutX="448.0" layoutY="399.0" text="Subtotal" AnchorPane.bottomAnchor="85.0" />
+                        <Label fx:id="discountLabel" layoutX="447.0" layoutY="424.0" text="Discount" AnchorPane.bottomAnchor="60.0" />
+                        <Label fx:id="totalLabel" layoutX="448.0" layoutY="454.0" text="Total" AnchorPane.bottomAnchor="30.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab onSelectionChanged="#handlePayments" text="Payment">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="20.0" layoutY="32.0" text="List of payments" />
+                        <TableView fx:id="paymentTable" layoutX="21.0" layoutY="79.0" prefHeight="398.0" prefWidth="518.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="21.0">
+                          <columns>
+                            <TableColumn maxWidth="100.0" prefWidth="75.0" text="SN" />
+                            <TableColumn maxWidth="600.0" prefWidth="128.0" text="Date" />
+                              <TableColumn maxWidth="400.0" prefWidth="208.0" text="Amount" />
+                              <TableColumn maxWidth="-Infinity" minWidth="104.0" prefWidth="104.0" text="Actions" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <FontAwesomeIconView fill="#bdbdbd" glyphName="SEARCH" layoutX="245.0" layoutY="126.0" size="1.5em" />
+      <Button fx:id="delBtn" graphicTextGap="5.0" layoutX="712.0" layoutY="68.0" mnemonicParsing="false" onAction="#handleDel" prefHeight="30.0" styleClass="danger-btn" AnchorPane.rightAnchor="171.0">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="TRASH" size="14" />
+         </graphic>
+      </Button>
+      <Button fx:id="editBtn" graphicTextGap="5.0" layoutX="676.0" layoutY="68.0" mnemonicParsing="false" onAction="#handleEdit" prefHeight="30.0" styleClass="primary-btn" AnchorPane.rightAnchor="210.0">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="EDIT" size="14" />
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

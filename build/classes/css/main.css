@@ -1,0 +1,259 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10 Apr, 2018, 9:39:16 AM
+    Author     : hatred
+*/
+
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("Roboto-Regular.ttf");
+}
+@font-face {
+    font-family: 'Roboto Bold';
+    src: url("Roboto-Bold.ttf");
+}
+#login-bg{
+    -fx-background-image: url("../icon/bg2.jpg");
+}
+.jfx-hamburger {
+    -fx-padding: 10.0;
+    -fx-spacing: 4px;
+    -fx-cursor: hand;
+}
+
+.jfx-hamburger StackPane {
+    -fx-pref-width: 30px;
+    -fx-pref-height: 4px;
+    -fx-background-color: #fff;
+    -fx-background-radius: 5px;
+}
+
+.label{
+    -fx-font-family: "Roboto Bold";
+}
+.h1{
+    -fx-font-family: "Roboto Bold";
+    -fx-font-size:28px;
+}
+.h2{
+    -fx-font-family: "Roboto Bold";
+    -fx-font-size:18px;
+}
+
+.primary-btn{
+    -fx-background-color: #369;  
+    -fx-padding:5;
+    -fx-text-fill:#fff;
+    -fx-font-family:"Roboto Bold";
+    -fx-effect: dropshadow(three-pass-box, #333, 10, 0, 0, 0);
+}
+.success-btn{
+    -fx-padding:5;
+    -fx-text-fill:#fff;
+    -fx-font-family:"Roboto Bold";
+    -fx-background-color: #396;  
+    -fx-effect: dropshadow(three-pass-box, purple, 10, 0, 0, 0);
+}
+.default-btn{
+    -fx-padding:5;
+    -fx-text-fill:#456;
+    -fx-font-family:"Roboto Bold";
+    -fx-background-color: transparent;  
+}
+.transparent-btn{
+    -fx-background-color: transparent;  
+    -fx-text-fill:#333;
+    -fx-font-family:"Robot Bold";
+}
+.danger-btn{
+    -fx-padding:5;
+    -fx-text-fill:#fff;
+    -fx-font-family:"Roboto Bold";
+    -fx-background-color: #F44336;  
+}
+
+.silver-btn{
+    -fx-padding:5;
+    -fx-text-fill:#333;
+    -fx-font-family:"Roboto Bold";
+    -fx-background-color: #f8f8f8;
+    -fx-border-color: #bdbdbd;
+}
+
+.card{
+    -fx-background-color: #fff;
+    -fx-background-radius: 6px;
+    -fx-effect: dropshadow(three-pass-box, #333, 10, 0, 0, 0);
+
+}
+.top-bar{
+    -fx-background-color: #F44336;
+    -fx-effect: dropshadow(three-pass-box, #333, 10, 0, 0, 0);
+
+}
+.top-panel{
+    -fx-background-color: #F44336;
+    -fx-effect: dropshadow(three-pass-box, #333, 5, 0, 0, 2);
+
+}
+.plane-top-panel{
+    -fx-background-color: #F44336;
+}
+.nav-bar{
+    -fx-background-color: #456;
+}
+.nav-item{
+    -fx-background-color: transparent;
+}
+.nav-item:hover{
+    -fx-border-color: transparent transparent transparent #fff;
+    -fx-border-width: 5;
+    -fx-border-insets: -5;
+}
+.nav-item:selected{
+    -fx-border-color: transparent transparent transparent #fff;
+    -fx-border-width: 5;
+    -fx-border-insets: -5;
+}
+.tab-pane{
+    -fx-skin: "com.sun.javafx.scene.control.skin.TabPaneSkin";
+    -fx-tab-min-height: 2em;
+    -fx-tab-max-height: 3em;
+    -fx-background-color: red;
+    -fx-effect: dropshadow(three-pass-box, #333, 5, 0, 0, 2);
+}
+.jfx-tab-pane .headers-region{
+    -fx-background-color: #369;
+}
+.jfx-tab-pane .tab-header-background{
+    -fx-background-color: #369;
+}
+.jfx-tab-pane .tab-selected-line{
+    -fx-stroke: #345;
+}
+
+
+
+
+
+
+
+
+
+
+/*table view styling*/
+
+.table-view {
+    -fx-table-color: rgba(82, 100, 174, 0.4);
+    -fx-padding: 10px;
+    /*-fx-tree-table-rippler-color: rgba(82, 100, 174, 0.6);*/
+    /*-fx-effect: dropshadow(three-pass-box, #333333, 10, 0, 0, 0);*/
+}
+
+.table-view:focused .table-row-cell:selected {
+    -fx-background-color: -fx-table-color;
+    -fx-table-cell-border-color: -fx-table-color;
+    -fx-text-fill: BLACK;
+}
+
+.table-view:focused .table-row-cell:selected .table-cell {
+    -fx-text-fill: BLACK;
+}
+
+.table-view .column-header,
+.table-view .column-header-background,
+.table-view .column-header-background .filler {
+    -fx-background-color: TRANSPARENT;
+}
+
+.table-view .column-header {
+    -fx-border-width: 0 1 0 1;
+    -fx-border-color: #F3F3F3;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #949494;
+    -fx-padding: 5 0 5 0;
+    -fx-font-family:"Roboto Bold";
+    
+}
+
+.table-view .column-header .arrow, .table-view .column-header .sort-order-dot {
+    -fx-background-color: #949494;
+}
+
+.table-view .column-header:last-visible {
+    -fx-border-width: 0 2 0 1;
+}
+
+.table-view .column-header-background {
+    -fx-border-width: 0 0.0 1 0;
+    -fx-border-color: #F3F3F3;
+}
+
+.table-view .table-cell {
+    -fx-border-width: 0 0 0 0;
+    -fx-padding: 5 0 5 0;
+    -fx-pref-tile-height: 100px;
+}
+
+.table-view .column-overlay {
+    -fx-background-color: -fx-table-color;
+}
+
+.table-view .column-resize-line, .table-view .column-drag-header {
+    -fx-background-color: -fx-table-color;
+}
+
+
+
+.table-row-cell > .disclosure-node > .arrow {
+    -fx-background-color: -fx-text-fill;
+    -fx-padding: 0.333333em 0.229em 0.333333em 0.229em; /* 4 */
+    -fx-shape: "M 0 -3.5 L 4 0 L 0 3.5 z";
+}
+
+.table-row-cell .text-field {
+    -fx-focus-color: rgba(82, 100, 174);
+}
+
+.table-row-cell .text-field:error {
+    -jfx-focus-color: #D34336;
+    -jfx-unfocus-color: #D34336;
+}
+
+.table-row-cell .text-field .error-label {
+    -fx-text-fill: #D34336;
+    -fx-font-size: 0.75em;
+}
+
+.table-row-cell .text-field .error-icon {
+    -fx-fill: #D34336;
+    -fx-font-size: 1.0em;
+}
+
+.table-row-group {
+    -fx-background-color: rgba(230, 230, 230);
+}
+
+.table-view .menu-item:focused {
+    -fx-background-color: -fx-tree-table-color;
+
+}
+
+.table-view .menu-item .label {
+    -fx-padding: 5 0 5 0;
+}
+.table-view .parent-col{
+    -fx-alignment: center;
+    -fx-padding: 0;
+}
+.table-view .right-align-col{
+    -fx-alignment: CENTER_RIGHT;
+    -fx-padding: 0;
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="491.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="218.0" style="-fx-background-color: #F44336;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="titleLabel" layoutX="44.0" layoutY="61.0" styleClass="h2" text="New Payment" textFill="#f8f8f8" />
+            <Label fx:id="idLabel" layoutX="44.0" layoutY="108.0" styleClass="caption-white" text="Billid" textFill="#f8f8f8">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label fx:id="dateLabel" layoutX="43.0" layoutY="143.0" styleClass="caption-white" text="Date" textFill="#f8f8f8">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label fx:id="amountLabel" layoutX="43.0" layoutY="179.0" styleClass="caption-white" text="Amount" textFill="#f8f8f8">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label fx:id="paidLabel" layoutX="43.0" layoutY="210.0" styleClass="caption-white" text="Paid" textFill="#f8f8f8">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label fx:id="remainingLabel" layoutX="43.0" layoutY="242.0" styleClass="caption-white" text="remaining" textFill="#f8f8f8">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+      <JFXTextField fx:id="amountField" labelFloat="true" layoutX="243.0" layoutY="65.0" onAction="#handleAmountField" prefHeight="25.0" prefWidth="218.0" promptText="Amount" />
+      <JFXDatePicker fx:id="datePicker" layoutX="243.0" layoutY="118.0" onAction="#handleDate" prefHeight="28.0" prefWidth="218.0" promptText="Date" />
+      <JFXTextArea fx:id="remarkField" layoutX="243.0" layoutY="174.0" prefHeight="91.0" prefWidth="218.0" promptText="Remark" />
+      <JFXButton fx:id="positiveBtn" buttonType="RAISED" layoutX="265.0" layoutY="300.0" onAction="#handlePositive" prefHeight="30.0" prefWidth="93.0" styleClass="primary-btn" text="Create" />
+      <JFXButton fx:id="negativeBtn" buttonType="RAISED" layoutX="368.0" layoutY="300.0" onAction="#handleNegative" prefHeight="30.0" prefWidth="93.0" styleClass="default-btn" text="Cancel" />
+   </children>
+</AnchorPane>

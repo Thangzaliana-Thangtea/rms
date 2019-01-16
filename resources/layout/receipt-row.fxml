@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+
+<fx:root alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="784.0" spacing="10.0" style="-fx-background-color: #fff;" type="HBox" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <padding>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+   </padding>
+   <children>
+      <TextField fx:id="particularField" prefHeight="30.0" prefWidth="312.0" promptText="Particular" />
+      <TextField fx:id="rateField" prefHeight="30.0" prefWidth="96.0" promptText="Rate" />
+      <TextField fx:id="qtyField" prefHeight="30.0" prefWidth="96.0" promptText="Quantity" />
+      <TextField fx:id="unitField" prefHeight="30.0" prefWidth="96.0" promptText="Unit" />
+      <TextField fx:id="amountField" prefHeight="30.0" prefWidth="96.0" promptText="Amount" />
+      <Button fx:id="delBtn" mnemonicParsing="false" onAction="#handleDel" prefHeight="30.0" styleClass="danger-btn">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="16" />
+         </graphic>
+      </Button>
+   </children>
+</fx:root>

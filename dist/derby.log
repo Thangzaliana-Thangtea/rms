@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Wed Jan 16 03:46:16 PST 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): instance a816c00e-0168-567b-b941-000000f0c890 
+on database directory D:\PROJEX\ReceiptManagement\dist\database with class loader sun.misc.Launcher$AppClassLoader@a57993 
+Loaded from file:/D:/PROJEX/ReceiptManagement/dist/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_111-b14
+user.dir=D:\PROJEX\ReceiptManagement\dist
+os.name=Windows 10
+os.arch=x86
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
